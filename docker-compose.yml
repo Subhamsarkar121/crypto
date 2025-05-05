@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  crypto-hub:
+    build: .
+    ports:
+      - "7860:7860"
+    environment:
+      # No space after =, or use YAML mapping style (preferred)
+      GROQ_API_KEY: "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"
+    volumes:
+      # Mount into the same WORKDIR you set in the Dockerfile
+      - .:/home/app
